@@ -22,7 +22,7 @@ public:
 	int setWeight(int inWeightTitle, int inWeightAbstract = 1);
 	int setTopNum(int inTopNum = 10);
 
-	int identifyCode;
+	int identifyCode; 
 	string inputFilePath, outputFilePath;
 	int weightTitle, weightAbstract;
 	int phraseLength;
