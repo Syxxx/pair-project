@@ -42,9 +42,6 @@
     <ClCompile Include="LexemeParser.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="GraphHTMLGenerator.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tools.h">
@@ -69,9 +66,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="LexemeParser.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphHTMLGenerator.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

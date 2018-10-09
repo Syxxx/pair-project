@@ -155,7 +155,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="FileContentFilter.cpp" />
-    <ClCompile Include="GraphHTMLGenerator.cpp" />
     <ClCompile Include="LexemeProcesser.cpp" />
     <ClCompile Include="PhraseProcesser.cpp" />
     <ClCompile Include="LexemeParser.cpp" />
@@ -171,7 +170,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="FileContentFilter.h" />
-    <ClInclude Include="GraphHTMLGenerator.h" />
     <ClInclude Include="LexemeProcesser.h" />
     <ClInclude Include="PhraseProcesser.h" />
     <ClInclude Include="LexemeParser.h" />
