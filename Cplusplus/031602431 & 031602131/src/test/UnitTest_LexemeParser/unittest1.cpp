@@ -32,7 +32,7 @@ namespace UnitTest_LexemeParser
 			lexProcesser->sendToStatus();
 
 			Assert::AreEqual<int>(159, status->charNum);
-			Assert::AreEqual<int>(0, status->lineNum);
+			Assert::AreEqual<int>(1, status->lineNum);
 
 		}
 

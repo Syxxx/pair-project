@@ -61,7 +61,7 @@ namespace UnitTest_Main
 
 			Assert::AreEqual<int>(1197698, status->charNum);
 			Assert::AreEqual<int>(120374, status->wordTotalNum);
-			Assert::AreEqual<int>(1957, status->lineNum);
+			Assert::AreEqual<int>(1958, status->lineNum);
 
 
 			map<string, int>::iterator iter;

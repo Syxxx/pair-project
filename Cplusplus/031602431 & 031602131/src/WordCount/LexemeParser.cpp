@@ -28,16 +28,11 @@ int LexemeParser::processStr(string str, int whichContext) {
 
 	for (unsigned int i = 0; i < str.length(); i++){
 		char c = str[i];
-		if (c == EOF) {
-			if (newLine == OLD)
-				lineNum++;
-		}
+
+		if (isascii(c))
+			charNum++;
 		else {
-			if (isascii(c))
-				charNum++;
-			else {
-				c = TAB;
-			}
+			c = TAB;
 		}
 
 		if (c == LINESYM) {
@@ -61,7 +56,9 @@ int LexemeParser::processStr(string str, int whichContext) {
 				nowSeperator.clear();
 			}
 			else;
-			nowSeperator.append(1, c);
+			if (c != '\n') {
+				nowSeperator.append(1, c);
+			}
 		}
 		else if (isalnum(c)) {
 			if (isalpha(c))
@@ -75,6 +72,16 @@ int LexemeParser::processStr(string str, int whichContext) {
 		else;
 	}
 	
+	// end of str
+	if (newLine == OLD)
+		lineNum++;
+	if (inWord == IN) {
+		lexProcesser->processLexeme(nowWord, nowSeperator, whichContext);
+		inWord = OUT;
+		nowWord.clear();
+		nowSeperator.clear();
+	}
+
 	return 0;
 }
 
