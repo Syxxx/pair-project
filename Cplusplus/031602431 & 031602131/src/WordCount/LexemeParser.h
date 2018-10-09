@@ -14,27 +14,27 @@ class LexemeProcesser;
 // This class process every character using processStr(char c)
 class LexemeParser{
 public:
-	LexemeParser(Status* stat, LexemeProcesser* lexProcesser);
+    LexemeParser(Status* stat, LexemeProcesser* lexProcesser);
 
     int processStr(string str, int whichContext);
-	int sendToStatus();
+    int sendToStatus();
 
 
 private:
     int charNum;
     int lineNum;
     int inWord;// IN = 1, OUT = 0
-	int newLine;// OLD = 1, NEW = 0;
-	
-	string nowWord;
-	string nowSeperator;
+    int newLine;// OLD = 1, NEW = 0;
+    
+    string nowWord;
+    string nowSeperator;
     const int SPACE = ' ';
     const int LINESYM = '\n';
     const int TAB = '\t';
     const int LINKWORDSYM = '-';
 
-	LexemeProcesser* lexProcesser;
-	Status * status;
+    LexemeProcesser* lexProcesser;
+    Status * status;
 };
 
 

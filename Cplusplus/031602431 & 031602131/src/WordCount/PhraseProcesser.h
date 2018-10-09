@@ -5,23 +5,23 @@
 
 class PhraseProcesser : public LexemeProcesser{
 public:
-	PhraseProcesser();
-	PhraseProcesser(Status* stat);
-	~PhraseProcesser();
+    PhraseProcesser();
+    PhraseProcesser(Status* stat);
+    ~PhraseProcesser();
 
-	int processLexeme(string word, string seperator, int whichContext);
-	int clearBuffer();
-	int sendToStatus();
+    int processLexeme(string word, string seperator, int whichContext);
+    int clearBuffer();
+    int sendToStatus();
 
 private:
-	int wordOfPhraseCount;
-	string* words;
-	string* seperators;
-	int wordsHead;
+    int wordOfPhraseCount;
+    string* words;
+    string* seperators;
+    int wordsHead;
 
-	int checkWordValid(string str);
+    int checkWordValid(string str);
 
-	int phraseLength;
+    int phraseLength;
 
 
 };

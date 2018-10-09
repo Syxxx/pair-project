@@ -5,18 +5,18 @@
 
 class LexemeProcesser{
 public:
-	LexemeProcesser();
-	LexemeProcesser(Status* stat);
-	virtual ~LexemeProcesser();
+    LexemeProcesser();
+    LexemeProcesser(Status* stat);
+    virtual ~LexemeProcesser();
 
-	virtual int processLexeme(string word, string seperator,int whichContext);
-	virtual int clearBuffer();
-	virtual int sendToStatus();
+    virtual int processLexeme(string word, string seperator,int whichContext);
+    virtual int clearBuffer();
+    virtual int sendToStatus();
 
 protected:
-	Status* status;
-	int wordTotalNum;
-	int inWhichContext;
+    Status* status;
+    int wordTotalNum;
+    int inWhichContext;
 
 };
 
