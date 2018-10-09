@@ -59,6 +59,10 @@ int LexemeParser::processStr(string str, int whichContext) {
 			if (c != '\n') {
 				nowSeperator.append(1, c);
 			}
+			else {
+				lexProcesser->clearBuffer();
+				nowSeperator.clear();
+			}
 		}
 		else if (isalnum(c)) {
 			if (isalpha(c))
