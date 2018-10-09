@@ -17,11 +17,7 @@ class FileContentFilter {
 public:
     FileContentFilter();
     FileContentFilter(Status* status, LexemeParser* lexemePareser);
-    ~FileContentFilter() {
-        if (file != nullptr) {
-            fclose(file);
-        }
-    }
+    ~FileContentFilter();
     int scan();
 
 

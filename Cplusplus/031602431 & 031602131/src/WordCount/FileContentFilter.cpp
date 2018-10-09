@@ -36,6 +36,12 @@ FileContentFilter::FileContentFilter(Status* stat, LexemeParser* lexemePareser)
 
 }
 
+FileContentFilter::~FileContentFilter() {
+    if (file != nullptr) {
+        fclose(file);
+    }
+}
+
 int FileContentFilter::scan() {
     char peekChar;
     while ((peekChar = fgetc(file)) != EOF) {
@@ -58,7 +64,6 @@ int FileContentFilter::scan() {
                     if (fileContent[index] == '\n')
                         break;
                 }
-                // to-do : check if it's the right index
 
                 fileContent = fileContent.substr(0, index + 1);
                 processer->processStr(fileContent, Status::ABSTRACT_CONTENT);
