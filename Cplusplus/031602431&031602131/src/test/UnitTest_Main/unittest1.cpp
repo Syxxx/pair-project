@@ -23,7 +23,6 @@
 #include "../../WordCount/WordCount.cpp"
 #include "../../WordCount/Status.h"
 #include "../../WordCount/Status.cpp"
-#include "../../WordCount/GraphHTMLGenerator.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
