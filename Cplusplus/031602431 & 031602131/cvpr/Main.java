@@ -30,7 +30,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         //从一个网站获取和解析一个HTML文档
         Document document = Jsoup.connect(resourceURL).get();
-        //获取所有的连接图片
+        //获取所有的连接
         Elements elements = document.select("a[href]");
         PrintWriter printWriter =new PrintWriter(new FileWriter("E:/a.txt",true),true);//第二个参数为true，从文件末尾写入 为false则从开
         for(Element element : elements) {
@@ -59,7 +59,7 @@ public class Main {
             }
 
         }
-        printWriter.close();//记得关闭输入流
+        printWriter.close();//关闭输入流
     }
 
 }
