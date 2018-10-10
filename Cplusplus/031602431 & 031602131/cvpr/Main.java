@@ -32,7 +32,7 @@ public class Main {
         Document document = Jsoup.connect(resourceURL).get();
         //获取所有的连接
         Elements elements = document.select("a[href]");
-        PrintWriter printWriter =new PrintWriter(new FileWriter("E:/a.txt",true),true);//第二个参数为true，从文件末尾写入 为false则从开
+        PrintWriter printWriter =new PrintWriter(new FileWriter("E:/result.txt",true),true);//第二个参数为true，从文件末尾写入 为false则从开
         for(Element element : elements) {
             //筛选论文链接
             if (element.attr("abs:href").endsWith(".html")) {
